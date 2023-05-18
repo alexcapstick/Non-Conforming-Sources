@@ -1,0 +1,12 @@
+python mnist_test.py --model-name SourceAppendMLP SeparateSourceClassifierMLP SeparateSourceBinaryClassifierMLP SourceClassifierAppendMLP SourcePredictMappingMLP --n-repeats 5 --n-sources 1 5 10 50 100 500 --batch-size 32 128 512 1024 4096 --learning-rate 0.001 --seed 42 --n-epochs 100 --n-jobs 4
+
+
+
+python mnist_test.py --model-name SourceCalcMappingPerBatchMLP --n-repeats 5 --n-sources 1 5 10 50 100 500 --batch-size 32 128 512 1024 4096 --learning-rate 0.001 --seed 42 --weight 0.1 0.5 1.0 5.0 10.0 --n-epochs 100 --n-jobs 4
+
+
+
+python ptbxl_test.py --model-name SeparateSourceClassifierResNet1D SeparateSourceBinaryClassifierResNet1D SourceClassifierAppendResNet1D SourcePredictMappingResNet1D --n-repeats 5 --n-sources 1 5 10 50 100 --batch-size 1024 --learning-rate 0.001 --seed 42 --n-epochs 100 --n-jobs 4
+
+
+python ptbxl_test.py --model-name SourceCalcMappingPerBatchResNet1D --n-repeats 5 --n-sources 1 5 10 50 100 --batch-size 1024 --learning-rate 0.001 --seed 42 --weight 0.1 0.5 1.0 5.0 10.0 --n-epochs 100 --n-jobs 4
